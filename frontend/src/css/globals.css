@@ -119,9 +119,7 @@
   body {
     @apply bg-background text-foreground;
 
-    font-feature-settings:
-      "rlig" 1,
-      "calt" 1;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 
   a.hyperlink {
@@ -139,38 +137,98 @@
   --shadow-xxs: 0px 0px 2px 0px var(--base-shadow-darker);
 
   /* biome-ignore format: definition needs to be oneline or breaks variants */
-  --shadow-xs: 1px 1px 2px 0px var(--base-shadow), 0px 0px 2px 0px hsl(0deg 0% 25% / var(--base-shadow-opacity));
+  --shadow-xs: 1px 1px 2px 0px var(--base-shadow),
+    0px 0px 2px 0px hsl(0deg 0% 25% / var(--base-shadow-opacity));
 
   /* biome-ignore format: definition needs to be oneline or breaks variants */
-  --shadow-sm: 2px 2px 2px 0px var(--base-shadow), 0px 0px 2px 0px hsl(0deg 0% 25% / var(--base-shadow-opacity));
+  --shadow-sm: 2px 2px 2px 0px var(--base-shadow),
+    0px 0px 2px 0px hsl(0deg 0% 25% / var(--base-shadow-opacity));
 
   /* biome-ignore format: definition needs to be oneline or breaks variants */
-  --shadow-md: 4px 4px 4px 0px var(--base-shadow), 0 0px 4px 0px hsl(0deg 0% 60% / var(--base-shadow-opacity));
+  --shadow-md: 4px 4px 4px 0px var(--base-shadow),
+    0 0px 4px 0px hsl(0deg 0% 60% / var(--base-shadow-opacity));
 
   /* biome-ignore format: definition needs to be oneline or breaks variants */
-  --shadow-lg: 5px 6px 4px 0px var(--base-shadow), 0 0px 4px 0px hsl(0deg 0% 75% / var(--base-shadow-opacity));
+  --shadow-lg: 5px 6px 4px 0px var(--base-shadow),
+    0 0px 4px 0px hsl(0deg 0% 75% / var(--base-shadow-opacity));
 
   /* biome-ignore format: definition needs to be oneline or breaks variants */
-  --shadow-xl: 8px 9px 4px 0px var(--base-shadow), 0 0px 6px 0px hsl(0deg 0% 85% / var(--base-shadow-opacity));
+  --shadow-xl: 8px 9px 4px 0px var(--base-shadow),
+    0 0px 6px 0px hsl(0deg 0% 85% / var(--base-shadow-opacity));
 
   /* biome-ignore format: definition needs to be oneline or breaks variants */
-  --shadow-2xl: 10px 12px 10px 0px var(--base-shadow), 0 0px 8px 0px hsl(0deg 0% 90% / var(--base-shadow-opacity));
+  --shadow-2xl: 10px 12px 10px 0px var(--base-shadow),
+    0 0px 8px 0px hsl(0deg 0% 90% / var(--base-shadow-opacity));
 
   /* biome-ignore format: definition needs to be oneline or breaks variants */
-  --shadow-xs-solid: 1px 1px 0px 0px var(--base-shadow-darker), 0px 0px 2px 0px hsl(0deg 0% 50% / 20%);
+  --shadow-xs-solid: 1px 1px 0px 0px var(--base-shadow-darker),
+    0px 0px 2px 0px hsl(0deg 0% 50% / 20%);
 
   /* biome-ignore format: definition needs to be oneline or breaks variants */
-  --shadow-sm-solid: 2px 2px 0px 0px var(--base-shadow-darker), 0px 0px 2px 0px hsl(0deg 0% 50% / 20%);
+  --shadow-sm-solid: 2px 2px 0px 0px var(--base-shadow-darker),
+    0px 0px 2px 0px hsl(0deg 0% 50% / 20%);
 
   /* biome-ignore format: definition needs to be oneline or breaks variants */
-  --shadow-md-solid: 4px 4px 0px 0px var(--base-shadow-darker), 0 0px 2px 0px hsl(0deg 0% 60% / 50%);
+  --shadow-md-solid: 4px 4px 0px 0px var(--base-shadow-darker),
+    0 0px 2px 0px hsl(0deg 0% 60% / 50%);
 
   /* biome-ignore format: definition needs to be oneline or breaks variants */
-  --shadow-lg-solid: 5px 6px 0px 0px var(--base-shadow-darker), 0 0px 4px 0px hsl(0deg 0% 75% / 50%);
+  --shadow-lg-solid: 5px 6px 0px 0px var(--base-shadow-darker),
+    0 0px 4px 0px hsl(0deg 0% 75% / 50%);
 
   /* biome-ignore format: definition needs to be oneline or breaks variants */
-  --shadow-xl-solid: 7px 8px 0px 0px var(--base-shadow-darker), 0 0px 4px 0px hsl(0deg 0% 85% / 50%);
+  --shadow-xl-solid: 7px 8px 0px 0px var(--base-shadow-darker),
+    0 0px 4px 0px hsl(0deg 0% 85% / 50%);
 
   /* biome-ignore format: definition needs to be oneline or breaks variants */
-  --shadow-2xl-solid: 10px 12px 0px 0px var(--base-shadow-darker), 0 0px 8px 0px hsl(0deg 0% 90% / 50%);
+  --shadow-2xl-solid: 10px 12px 0px 0px var(--base-shadow-darker),
+    0 0px 8px 0px hsl(0deg 0% 90% / 50%);
+}
+
+.puku,
+.marimo:is(.puku *) {
+  color-scheme: dark;
+  
+  /* Enhanced color palette for puku theme */
+  --background: hsl(240deg 10% 15%);
+  --foreground: hsl(210deg 20% 90%);
+  --primary: hsl(280deg 60% 60%);
+  --primary-foreground: hsl(280deg 20% 95%);
+  --secondary: hsl(240deg 15% 20%);
+  --secondary-foreground: hsl(210deg 15% 85%);
+  --accent: hsl(320deg 70% 65%);
+  --accent-foreground: hsl(320deg 30% 95%);
+  --muted: hsl(240deg 8% 12%);
+  --muted-foreground: hsl(210deg 15% 70%);
+  --border: hsl(240deg 15% 25%);
+  --input: hsl(240deg 10% 25%);
+  --card: hsl(240deg 12% 18%);
+  --card-foreground: hsl(210deg 15% 88%);
+  
+  /* Custom shadows for puku theme */
+  --base-shadow: hsl(280deg 30% 20% / 60%);
+  --base-shadow-darker: hsl(280deg 40% 15% / 80%);
+}
+
+/* Custom styling for code cells in puku theme */
+.puku [data-cell-role="cell"] {
+  background: hsl(240deg 12% 18%);
+  border: 1px solid hsl(280deg 20% 30%);
+  box-shadow: 0 2px 8px hsl(280deg 30% 10% / 40%);
+}
+
+/* Custom styling for outputs in puku theme */  
+.puku [data-cell-role="output"] {
+  background: hsl(240deg 8% 12%);
+  border: 1px solid hsl(280deg 15% 25%);
+}
+
+/* Code editor styling for puku theme */
+.puku .cm-editor {
+  background: hsl(240deg 15% 16%) !important;
+  color: hsl(210deg 20% 90%) !important;
+}
+
+.puku .cm-focused {
+  outline: 2px solid hsl(280deg 60% 60%) !important;
 }
