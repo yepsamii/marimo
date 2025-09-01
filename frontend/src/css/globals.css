@@ -39,7 +39,7 @@
   }
 
   :root,
-  .marimo {
+  .puku {
     --monospace-font: var(--marimo-monospace-font, "Fira Mono", monospace);
     --text-font: var(--marimo-text-font, "PT Sans", sans-serif);
     --heading-font: var(--marimo-heading-font, "Lora", serif);
@@ -106,7 +106,7 @@
   }
 
   .dark,
-  .marimo:is(.dark *) {
+  .puku:is(.dark *) {
     color-scheme: dark;
   }
 }

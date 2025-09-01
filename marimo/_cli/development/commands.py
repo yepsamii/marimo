@@ -277,7 +277,7 @@ def _generate_server_api_schema() -> dict[str, Any]:
     schemas = SchemaGenerator(
         {
             "openapi": "3.1.0",
-            "info": {"title": "marimo API", "version": __version__},
+            "info": {"title": "puku API", "version": __version__},
             "components": {
                 "schemas": {
                     **component_schemas,
