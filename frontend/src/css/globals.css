@@ -51,58 +51,58 @@
 
     /* Radix dark colors: https://github.com/radix-ui/colors/blob/main/src/dark.ts */
 
-    /* Base colors - Modern cream theme for light mode */
-    --background: light-dark(hsl(45deg 30% 97%), hsl(150deg 7.7% 10.2%));
-    --foreground: light-dark(hsl(20deg 15% 25%), hsl(155deg 7% 93%));
-    --muted: light-dark(hsl(40deg 20% 94%), hsl(180deg 14% 1%));
+    /* Base colors - Modern cream for light, Neon purple/blue for dark */
+    --background: light-dark(hsl(45deg 30% 97%), hsl(250deg 20% 8%));
+    --foreground: light-dark(hsl(20deg 15% 25%), hsl(220deg 90% 95%));
+    --muted: light-dark(hsl(40deg 20% 94%), hsl(260deg 25% 15%));
     --muted-foreground: light-dark(
       hsl(30deg 15% 40%),
-      hsl(155deg 5% 68.3%)
+      hsl(230deg 60% 75%)
     );
-    --popover: light-dark(hsl(44deg 40% 97%), hsl(151deg 5.5% 15.2%));
+    --popover: light-dark(hsl(44deg 40% 97%), hsl(255deg 20% 12%));
     --popover-foreground: light-dark(
       hsl(20deg 15% 25%),
-      hsl(155deg 5% 68.3%)
+      hsl(220deg 80% 90%)
     );
-    --card: light-dark(hsl(42deg 35% 96%), hsl(151deg 5.5% 15.2%));
+    --card: light-dark(hsl(42deg 35% 96%), hsl(260deg 25% 11%));
     --card-foreground: light-dark(
       hsl(20deg 15% 25%),
-      hsl(155deg 5% 76.3%)
+      hsl(220deg 85% 92%)
     );
-    --border: light-dark(hsl(35deg 15% 85%), hsl(153deg 3.7% 24.2%));
-    --input: light-dark(hsl(42deg 30% 96%), hsl(154deg 3.3% 28.7%));
-    --primary: light-dark(hsl(25deg 60% 55%), hsl(192deg 59.8% 39%));
-    --primary-foreground: light-dark(hsl(45deg 40% 98%), hsl(190deg 80% 84%));
-    --secondary: light-dark(hsl(35deg 25% 90%), hsl(155deg 7% 93%));
+    --border: light-dark(hsl(35deg 15% 85%), hsl(270deg 50% 25%));
+    --input: light-dark(hsl(42deg 30% 96%), hsl(260deg 30% 18%));
+    --primary: light-dark(hsl(25deg 60% 55%), hsl(280deg 100% 70%));
+    --primary-foreground: light-dark(hsl(45deg 40% 98%), hsl(250deg 20% 10%));
+    --secondary: light-dark(hsl(35deg 25% 90%), hsl(220deg 90% 60%));
     --secondary-foreground: light-dark(
       hsl(20deg 20% 30%),
-      hsl(151deg 5.5% 15.2%)
+      hsl(250deg 20% 10%)
     );
-    --accent: light-dark(hsl(15deg 75% 65%), hsl(192deg 56.6% 26.5%));
-    --accent-foreground: light-dark(hsl(45deg 50% 98%), hsl(190deg 80% 84%));
-    --ring: light-dark(hsl(25deg 60% 55%), hsl(215deg 20.2% 65.1%));
+    --accent: light-dark(hsl(15deg 75% 65%), hsl(200deg 100% 60%));
+    --accent-foreground: light-dark(hsl(45deg 50% 98%), hsl(250deg 20% 10%));
+    --ring: light-dark(hsl(25deg 60% 55%), hsl(270deg 100% 65%));
 
-    /* Semantic colors - Warm tones for cream theme */
-    --destructive: light-dark(hsl(0deg 50% 55%), hsl(0deg 100% 70%));
-    --destructive-foreground: light-dark(hsl(45deg 40% 98%), hsl(210deg 40% 98%));
-    --error: light-dark(hsl(0deg 50% 55%), hsl(0deg 77% 64%));
-    --error-foreground: light-dark(hsl(45deg 40% 98%), hsl(210deg 40% 98%));
-    --success: light-dark(hsl(120deg 40% 50%), hsl(130deg 100% 70%));
-    --success-foreground: light-dark(hsl(45deg 40% 98%), hsl(210deg 40% 98%));
-    --action: light-dark(hsl(35deg 70% 75%), hsl(52deg 96.8% 82%));
-    --action-hover: light-dark(hsl(30deg 75% 80%), hsl(54deg 100% 86.7%));
-    --action-foreground: light-dark(hsl(25deg 60% 35%), hsl(42deg 100% 29%));
-    --link: light-dark(hsl(25deg 70% 50%), hsl(211deg 90% 62%));
-    --link-visited: light-dark(hsl(280deg 40% 50%), hsl(272deg 51% 74%));
-    --stale: light-dark(hsl(30deg 40% 60% / 25%), hsl(42deg 56% 44% / 25%));
+    /* Semantic colors - Warm for light, Neon for dark */
+    --destructive: light-dark(hsl(0deg 50% 55%), hsl(350deg 90% 70%));
+    --destructive-foreground: light-dark(hsl(45deg 40% 98%), hsl(250deg 20% 10%));
+    --error: light-dark(hsl(0deg 50% 55%), hsl(350deg 90% 70%));
+    --error-foreground: light-dark(hsl(45deg 40% 98%), hsl(250deg 20% 10%));
+    --success: light-dark(hsl(120deg 40% 50%), hsl(150deg 100% 60%));
+    --success-foreground: light-dark(hsl(45deg 40% 98%), hsl(250deg 20% 10%));
+    --action: light-dark(hsl(35deg 70% 75%), hsl(280deg 80% 75%));
+    --action-hover: light-dark(hsl(30deg 75% 80%), hsl(270deg 85% 80%));
+    --action-foreground: light-dark(hsl(25deg 60% 35%), hsl(250deg 20% 10%));
+    --link: light-dark(hsl(25deg 70% 50%), hsl(220deg 100% 75%));
+    --link-visited: light-dark(hsl(280deg 40% 50%), hsl(290deg 90% 70%));
+    --stale: light-dark(hsl(30deg 40% 60% / 25%), hsl(270deg 60% 50% / 25%));
 
-    /* Base shadows - Warm tinted shadows for cream theme */
-    --base-shadow: light-dark(hsl(25deg 20% 70% / 15%), hsla(0deg 0% 36% / 60%));
+    /* Base shadows - Warm for light, Purple glow for dark */
+    --base-shadow: light-dark(hsl(25deg 20% 70% / 15%), hsl(280deg 100% 40% / 20%));
     --base-shadow-darker: light-dark(
       hsl(20deg 30% 60% / 25%),
-      hsl(0deg 0% 50% / 60%)
+      hsl(260deg 100% 30% / 30%)
     );
-    --base-shadow-opacity: light-dark(8%, 5%);
+    --base-shadow-opacity: light-dark(8%, 12%);
   }
 
   .dark,
