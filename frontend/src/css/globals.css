@@ -51,58 +51,58 @@
 
     /* Radix dark colors: https://github.com/radix-ui/colors/blob/main/src/dark.ts */
 
-    /* Base colors. */
-    --background: light-dark(hsl(0deg 0% 100%), hsl(150deg 7.7% 10.2%));
-    --foreground: light-dark(hsl(222.2deg 47.4% 11.2%), hsl(155deg 7% 93%));
-    --muted: light-dark(hsl(210deg 40% 96.1%), hsl(180deg 14% 1%));
+    /* Base colors - Modern cream theme for light mode */
+    --background: light-dark(hsl(45deg 30% 97%), hsl(150deg 7.7% 10.2%));
+    --foreground: light-dark(hsl(20deg 15% 25%), hsl(155deg 7% 93%));
+    --muted: light-dark(hsl(40deg 20% 94%), hsl(180deg 14% 1%));
     --muted-foreground: light-dark(
-      hsl(215.4deg 16.3% 46.9%),
+      hsl(30deg 15% 40%),
       hsl(155deg 5% 68.3%)
     );
-    --popover: light-dark(hsl(0deg 0% 100%), hsl(151deg 5.5% 15.2%));
+    --popover: light-dark(hsl(44deg 40% 97%), hsl(151deg 5.5% 15.2%));
     --popover-foreground: light-dark(
-      hsl(222.2deg 47.4% 11.2%),
+      hsl(20deg 15% 25%),
       hsl(155deg 5% 68.3%)
     );
-    --card: light-dark(hsl(0deg 0% 100%), hsl(151deg 5.5% 15.2%));
+    --card: light-dark(hsl(42deg 35% 96%), hsl(151deg 5.5% 15.2%));
     --card-foreground: light-dark(
-      hsl(222.2deg 47.4% 11.2%),
+      hsl(20deg 15% 25%),
       hsl(155deg 5% 76.3%)
     );
-    --border: light-dark(hsl(214.3deg 31.8% 91.4%), hsl(153deg 3.7% 24.2%));
-    --input: light-dark(hsl(0deg 0% 64%), hsl(154deg 3.3% 28.7%));
-    --primary: light-dark(hsl(208deg 93.5% 47.4%), hsl(192deg 59.8% 39%));
-    --primary-foreground: light-dark(hsl(210deg 40% 98%), hsl(190deg 80% 84%));
-    --secondary: light-dark(hsl(210deg 40% 96.1%), hsl(155deg 7% 93%));
+    --border: light-dark(hsl(35deg 15% 85%), hsl(153deg 3.7% 24.2%));
+    --input: light-dark(hsl(42deg 30% 96%), hsl(154deg 3.3% 28.7%));
+    --primary: light-dark(hsl(25deg 60% 55%), hsl(192deg 59.8% 39%));
+    --primary-foreground: light-dark(hsl(45deg 40% 98%), hsl(190deg 80% 84%));
+    --secondary: light-dark(hsl(35deg 25% 90%), hsl(155deg 7% 93%));
     --secondary-foreground: light-dark(
-      hsl(222.2deg 47.4% 11.2%),
+      hsl(20deg 20% 30%),
       hsl(151deg 5.5% 15.2%)
     );
-    --accent: light-dark(hsl(209deg 100% 96.5%), hsl(192deg 56.6% 26.5%));
-    --accent-foreground: light-dark(hsl(211deg 90% 42%), hsl(190deg 80% 84%));
-    --ring: hsl(215deg 20.2% 65.1%);
+    --accent: light-dark(hsl(15deg 75% 65%), hsl(192deg 56.6% 26.5%));
+    --accent-foreground: light-dark(hsl(45deg 50% 98%), hsl(190deg 80% 84%));
+    --ring: light-dark(hsl(25deg 60% 55%), hsl(215deg 20.2% 65.1%));
 
-    /* Semantic colors. */
-    --destructive: hsl(0deg 100% 70%);
-    --destructive-foreground: hsl(210deg 40% 98%);
-    --error: hsl(0deg 77% 64%);
-    --error-foreground: hsl(210deg 40% 98%);
-    --success: hsl(130deg 100% 70%);
-    --success-foreground: hsl(210deg 40% 98%);
-    --action: hsl(52deg 96.8% 82%);
-    --action-hover: hsl(54deg 100% 86.7%);
-    --action-foreground: hsl(42deg 100% 29%);
-    --link: light-dark(hsl(211deg 90% 42%), hsl(211deg 90% 62%));
-    --link-visited: light-dark(hsl(272deg 51% 54%), hsl(272deg 51% 74%));
-    --stale: hsl(42deg 56% 44% / 25%);
+    /* Semantic colors - Warm tones for cream theme */
+    --destructive: light-dark(hsl(0deg 50% 55%), hsl(0deg 100% 70%));
+    --destructive-foreground: light-dark(hsl(45deg 40% 98%), hsl(210deg 40% 98%));
+    --error: light-dark(hsl(0deg 50% 55%), hsl(0deg 77% 64%));
+    --error-foreground: light-dark(hsl(45deg 40% 98%), hsl(210deg 40% 98%));
+    --success: light-dark(hsl(120deg 40% 50%), hsl(130deg 100% 70%));
+    --success-foreground: light-dark(hsl(45deg 40% 98%), hsl(210deg 40% 98%));
+    --action: light-dark(hsl(35deg 70% 75%), hsl(52deg 96.8% 82%));
+    --action-hover: light-dark(hsl(30deg 75% 80%), hsl(54deg 100% 86.7%));
+    --action-foreground: light-dark(hsl(25deg 60% 35%), hsl(42deg 100% 29%));
+    --link: light-dark(hsl(25deg 70% 50%), hsl(211deg 90% 62%));
+    --link-visited: light-dark(hsl(280deg 40% 50%), hsl(272deg 51% 74%));
+    --stale: light-dark(hsl(30deg 40% 60% / 25%), hsl(42deg 56% 44% / 25%));
 
-    /* Base shadows. */
-    --base-shadow: light-dark(hsl(0deg 0% 85% / 40%), hsla(0deg 0% 36% / 60%));
+    /* Base shadows - Warm tinted shadows for cream theme */
+    --base-shadow: light-dark(hsl(25deg 20% 70% / 15%), hsla(0deg 0% 36% / 60%));
     --base-shadow-darker: light-dark(
-      hsl(0deg 0% 50% / 40%),
+      hsl(20deg 30% 60% / 25%),
       hsl(0deg 0% 50% / 60%)
     );
-    --base-shadow-opacity: 5%;
+    --base-shadow-opacity: light-dark(8%, 5%);
   }
 
   .dark,
@@ -185,50 +185,3 @@
     0 0px 8px 0px hsl(0deg 0% 90% / 50%);
 }
 
-.puku,
-.marimo:is(.puku *) {
-  color-scheme: dark;
-  
-  /* Enhanced color palette for puku theme */
-  --background: hsl(240deg 10% 15%);
-  --foreground: hsl(210deg 20% 90%);
-  --primary: hsl(280deg 60% 60%);
-  --primary-foreground: hsl(280deg 20% 95%);
-  --secondary: hsl(240deg 15% 20%);
-  --secondary-foreground: hsl(210deg 15% 85%);
-  --accent: hsl(320deg 70% 65%);
-  --accent-foreground: hsl(320deg 30% 95%);
-  --muted: hsl(240deg 8% 12%);
-  --muted-foreground: hsl(210deg 15% 70%);
-  --border: hsl(240deg 15% 25%);
-  --input: hsl(240deg 10% 25%);
-  --card: hsl(240deg 12% 18%);
-  --card-foreground: hsl(210deg 15% 88%);
-  
-  /* Custom shadows for puku theme */
-  --base-shadow: hsl(280deg 30% 20% / 60%);
-  --base-shadow-darker: hsl(280deg 40% 15% / 80%);
-}
-
-/* Custom styling for code cells in puku theme */
-.puku [data-cell-role="cell"] {
-  background: hsl(240deg 12% 18%);
-  border: 1px solid hsl(280deg 20% 30%);
-  box-shadow: 0 2px 8px hsl(280deg 30% 10% / 40%);
-}
-
-/* Custom styling for outputs in puku theme */  
-.puku [data-cell-role="output"] {
-  background: hsl(240deg 8% 12%);
-  border: 1px solid hsl(280deg 15% 25%);
-}
-
-/* Code editor styling for puku theme */
-.puku .cm-editor {
-  background: hsl(240deg 15% 16%) !important;
-  color: hsl(210deg 20% 90%) !important;
-}
-
-.puku .cm-focused {
-  outline: 2px solid hsl(280deg 60% 60%) !important;
-}

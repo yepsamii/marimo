@@ -97,7 +97,7 @@ ExecutionType = Literal["relaxed", "strict"]
 # TODO(akshayka): remove normal, migrate to compact
 # normal == compact
 WidthType = Literal["normal", "compact", "medium", "full", "columns"]
-Theme = Literal["light", "dark", "system", "puku"]
+Theme = Literal["light", "dark", "system"]
 ExportType = Literal["html", "markdown", "ipynb"]
 SqlOutputType = Literal["polars", "lazy-polars", "pandas", "native", "auto"]
 StoreKey = Literal["file", "redis", "rest", "tiered"]
@@ -166,7 +166,7 @@ class DisplayConfig(TypedDict):
 
     **Keys.**
 
-    - `theme`: `"light"`, `"dark"`, `"system"`, or `"puku"`
+    - `theme`: `"light"`, `"dark"`, or `"system"`
     - `code_editor_font_size`: font size for the code editor
     - `cell_output`: `"above"` or `"below"`
     - `dataframes`: `"rich"` or `"plain"`

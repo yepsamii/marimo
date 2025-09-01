@@ -5,10 +5,10 @@ import { resolvedMarimoConfigAtom } from "@/core/config/config";
 import { isIslands } from "@/core/islands/utils";
 import { store } from "@/core/state/jotai";
 
-export type Theme = "light" | "dark" | "system" | "puku";
+export type Theme = "light" | "dark" | "system";
 export type ResolvedTheme = "light" | "dark";
 
-export const THEMES: Theme[] = ["light", "dark", "system", "puku"];
+export const THEMES: Theme[] = ["light", "dark", "system"];
 
 const themeAtom = atom((get) => {
   // If it is islands, try a few ways to infer if it is dark mode.
@@ -106,11 +106,7 @@ export const resolvedThemeAtom = atom((get) => {
     return codeTheme;
   }
   const prefersDarkMode = get(prefersDarkModeAtom);
-  // Add your custom theme logic
-  if (theme === "puku") {
-    return "puku"; // or determine based on conditions
-  }
-  return theme === "system" ? (prefersDarkMode ? "dark" : "light") : theme;
+  return theme === "system" ? (prefersDarkMode ? "dark" : "light") : theme as ResolvedTheme;
 });
 
 /**
