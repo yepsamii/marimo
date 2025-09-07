@@ -29,7 +29,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { Tooltip } from "@/components/ui/tooltip";
 import { toast } from "@/components/ui/use-toast";
-import { getSessionId, isSessionId } from "@/core/kernel/session";
+import { isSessionId } from "@/core/kernel/session";
 import { useRequestClient } from "@/core/network/requests";
 import type { FileInfo, MarimoFile } from "@/core/network/types";
 import { combineAsyncData, useAsyncData } from "@/hooks/useAsyncData";
@@ -65,10 +65,6 @@ import {
 import { Spinner } from "../icons/spinner";
 import { Input } from "../ui/input";
 
-function tabTarget(path: string) {
-  // Consistent tab target so we open in the same tab when clicking on the same notebook
-  return `${getSessionId()}-${encodeURIComponent(path)}`;
-}
 
 const HomePage: React.FC = () => {
   const [nonce, setNonce] = useState(0);
@@ -111,11 +107,11 @@ const HomePage: React.FC = () => {
         }}
       >
         <div className="absolute top-3 right-5 flex gap-3 z-50">
-          {/* <OpenTutorialDropDown /> */}
-          {/* <ConfigButton showAppConfig={false} /> */}
-          {/* <ShutdownButton
+          <OpenTutorialDropDown />
+          <ConfigButton showAppConfig={false} />
+          <ShutdownButton
             description={`This will shutdown the notebook server and terminate all running notebooks (${running.size}). You'll lose all data that's in memory.`}
-          /> */}
+          />
         </div>
         <div className="flex flex-col gap-6 max-w-6xl container pt-5 pb-20 z-10">
           <img src="logo.png" alt="puku-note logo" className="w-1/2 mb-2" />

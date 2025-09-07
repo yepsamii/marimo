@@ -16,7 +16,7 @@ export const menuContentCommon = cva(
 );
 
 export const menuSubTriggerVariants = cva(
-  "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-hidden focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
+  "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-hidden hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
   {
     variants: {
       inset: {
@@ -31,7 +31,7 @@ export const MENU_ITEM_DISABLED =
 
 export const menuControlVariants = cva(
   cn(
-    "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-hidden transition-colors focus:bg-accent focus:text-accent-foreground",
+    "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
     MENU_ITEM_DISABLED,
   ),
   { variants: {} },
@@ -64,13 +64,13 @@ export const menuItemVariants = cva(
       },
       variant: {
         default:
-          "focus:bg-accent focus:text-accent-foreground aria-selected:bg-accent aria-selected:text-accent-foreground",
+          "hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground aria-selected:bg-accent aria-selected:text-accent-foreground",
         danger:
-          "focus:bg-(--red-5) focus:text-(--red-12) aria-selected:bg-(--red-5) aria-selected:text-(--red-12)",
+          "hover:bg-(--red-5) hover:text-(--red-12) focus:bg-(--red-5) focus:text-(--red-12) aria-selected:bg-(--red-5) aria-selected:text-(--red-12)",
         muted:
-          "focus:bg-muted/70 focus:text-muted-foreground aria-selected:bg-muted/70 aria-selected:text-muted-foreground",
+          "hover:bg-muted/70 hover:text-foreground focus:bg-muted/70 focus:text-foreground aria-selected:bg-muted/70 aria-selected:text-foreground",
         success:
-          "focus:bg-(--grass-3) focus:text-(--grass-11) aria-selected:bg-(--grass-3) aria-selected:text-(--grass-11)",
+          "hover:bg-(--grass-3) hover:text-(--grass-11) focus:bg-(--grass-3) focus:text-(--grass-11) aria-selected:bg-(--grass-3) aria-selected:text-(--grass-11)",
         disabled: "text-muted-foreground",
       },
     },

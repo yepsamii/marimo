@@ -1,19 +1,19 @@
 {
-  "short_name": "Marimo",
-  "name": "A Marimo App",
+  "short_name": "Puku Note",
+  "name": "Puku Note - Interactive Python Notebooks",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "puku-favicon.ico",
       "sizes": "48x48",
       "type": "image/x-icon"
     },
     {
-      "src": "android-chrome-192x192.png",
+      "src": "puku-android-chrome-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "android-chrome-512x512.png",
+      "src": "puku-android-chrome-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     }

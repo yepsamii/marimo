@@ -66,9 +66,13 @@ export const SnippetsPanel: React.FC = () => {
             rootClassName="flex-1 border-r"
           />
           <ContributeSnippetButton>
-            <button className="float-right border-b px-2 m-0 h-full hover:bg-accent hover:text-accent-foreground">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="float-right px-2 m-0 h-full rounded-none border-l hover:bg-accent hover:text-accent-foreground"
+            >
               <PlusIcon className="h-4 w-4" />
-            </button>
+            </Button>
           </ContributeSnippetButton>
         </div>
 
@@ -221,7 +225,7 @@ const SnippetList: React.FC<{
           onSelect={() => onSelect(snippet)}
         >
           <div className="flex flex-row gap-2 items-center">
-            <span className="mt-1 text-accent-foreground">{snippet.title}</span>
+            <span className="mt-1 text-foreground">{snippet.title}</span>
           </div>
         </CommandItem>
       ))}

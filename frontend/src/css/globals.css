@@ -57,19 +57,19 @@
     --muted: light-dark(hsl(40deg 20% 94%), hsl(260deg 25% 15%));
     --muted-foreground: light-dark(
       hsl(30deg 15% 40%),
-      hsl(230deg 60% 75%)
+      hsl(230deg 40% 85%)
     );
     --popover: light-dark(hsl(44deg 40% 97%), hsl(255deg 20% 12%));
     --popover-foreground: light-dark(
       hsl(20deg 15% 25%),
-      hsl(220deg 80% 90%)
+      hsl(220deg 60% 95%)
     );
     --card: light-dark(hsl(42deg 35% 96%), hsl(260deg 25% 11%));
     --card-foreground: light-dark(
       hsl(20deg 15% 25%),
-      hsl(220deg 85% 92%)
+      hsl(220deg 60% 95%)
     );
-    --border: light-dark(hsl(35deg 15% 85%), hsl(270deg 50% 25%));
+    --border: light-dark(hsl(35deg 15% 85%), hsl(270deg 40% 35%));
     --input: light-dark(hsl(42deg 30% 96%), hsl(260deg 30% 18%));
     --primary: light-dark(hsl(25deg 60% 55%), hsl(280deg 100% 70%));
     --primary-foreground: light-dark(hsl(45deg 40% 98%), hsl(250deg 20% 10%));
@@ -78,8 +78,8 @@
       hsl(20deg 20% 30%),
       hsl(250deg 20% 10%)
     );
-    --accent: light-dark(hsl(15deg 75% 65%), hsl(200deg 100% 60%));
-    --accent-foreground: light-dark(hsl(45deg 50% 98%), hsl(250deg 20% 10%));
+    --accent: light-dark(hsl(15deg 75% 65%), hsl(200deg 80% 70%));
+    --accent-foreground: light-dark(hsl(45deg 50% 98%), hsl(250deg 20% 8%));
     --ring: light-dark(hsl(25deg 60% 55%), hsl(270deg 100% 65%));
 
     /* Semantic colors - Warm for light, Neon for dark */

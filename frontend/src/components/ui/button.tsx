@@ -49,10 +49,10 @@ const buttonVariants = cva(
           activeCommon,
         ),
         outline: cn(
-          "border border-slate-300 shadow-xs",
+          "border border-border shadow-xs bg-background",
           "hover:bg-accent hover:text-accent-foreground",
-          "hover:border-primary",
-          "aria-selected:text-accent-foreground aria-selected:border-primary",
+          "hover:border-accent",
+          "aria-selected:bg-accent aria-selected:text-accent-foreground aria-selected:border-accent",
           activeCommon,
         ),
         secondary: cn(
