@@ -114,7 +114,7 @@ const HomePage: React.FC = () => {
           />
         </div>
         <div className="flex flex-col gap-6 max-w-6xl container pt-5 pb-20 z-10">
-          <img src="logo.png" alt="puku-note logo" className="w-1/2 mb-2" />
+          <img src="logo.png" alt="puku-note logo" className="w-48 mb-2" />
           <CreateNewNotebook />
           {/* <ResourceLinks /> */}
           <NotebookList

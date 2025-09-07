@@ -1,42 +1,4 @@
-# Multi-stage Dockerfile for Puku Note (marimo fork)
-FROM node:20-slim AS frontend-builder
-
-# Set Node.js memory limit for large builds (reduced for 8GB systems)
-ENV NODE_OPTIONS="--max-old-space-size=4096"
-
-# Install pnpm
-RUN npm install -g pnpm@9
-
-# Set working directory
-WORKDIR /app
-
-# Copy package files (lockfile is in root, not frontend dir)
-COPY package.json pnpm-lock.yaml pnpm-workspace.yaml turbo.json tsconfig.json biome.jsonc ./
-COPY frontend/package.json ./frontend/
-COPY packages/llm-info/package.json ./packages/llm-info/
-COPY packages/lsp/package.json ./packages/lsp/
-COPY packages/openapi/package.json ./packages/openapi/
-COPY packages/ts-config/package.json ./packages/ts-config/
-COPY patches/ ./patches/
-
-# Copy source code first
-COPY frontend/ ./frontend/
-COPY packages/ ./packages/
-COPY marimo/_schemas/ ./marimo/_schemas/
-
-# Install all dependencies (including devDependencies needed for build)
-RUN rm -rf node_modules frontend/node_modules packages/*/node_modules && \
-    pnpm install --no-frozen-lockfile
-
-# Install tsx for codegen using npm (pnpm global requires setup)
-RUN npm install -g tsx
-
-# Skip build - use pre-built assets from local machine
-# The dist folder should be copied from local build
-# Run: cd frontend && NODE_OPTIONS="--max-old-space-size=4096" pnpm build
-# Before running docker-compose up --build
-
-# Production stage
+# Simple Dockerfile for Puku Note (uses pre-built frontend)
 FROM python:3.11-slim AS runtime
 
 # Install system dependencies
@@ -63,9 +25,8 @@ RUN uv pip install --system -e .
 RUN mkdir -p marimo/_static/
 COPY frontend/dist/ ./marimo/_static/
 
-# Create _lsp directory and copy LSP assets if they exist  
+# Create _lsp directory
 RUN mkdir -p marimo/_lsp/
-# LSP assets would be built locally if needed
 
 # Create directories for user data
 RUN mkdir -p /app/notebooks /app/data

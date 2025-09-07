@@ -7,6 +7,12 @@ services:
       dockerfile: Dockerfile
     ports:
       - "2718:2718"
+    deploy:
+      resources:
+        limits:
+          memory: 6G
+        reservations:
+          memory: 1G
     volumes:
       # Mount notebooks directory for persistence
       - ./notebooks:/app/notebooks
@@ -32,6 +38,12 @@ services:
     ports:
       - "2718:2718"
       - "3000:3000"  # Frontend dev server
+    deploy:
+      resources:
+        limits:
+          memory: 6G
+        reservations:
+          memory: 1G
     volumes:
       - .:/app
       - /app/node_modules
