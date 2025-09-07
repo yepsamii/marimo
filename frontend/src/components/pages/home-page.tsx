@@ -315,7 +315,8 @@ const Node = ({ node, style }: NodeRendererProps<FileInfo>) => {
       <a
         className={itemClassName}
         href={asURL(`?file=${relativePath}`).toString()}
-        target={tabTarget(relativePath)}
+        // target={tabTarget(relativePath)}
+        target="_self"
       >
         {iconEl}
         <span className="flex-1 overflow-hidden text-ellipsis">
@@ -397,7 +398,8 @@ const MarimoFileComponent = ({ file }: { file: MarimoFile }) => {
       className="py-1.5 px-4 hover:bg-(--blue-2) hover:text-primary transition-all duration-300 cursor-pointer group relative flex gap-4 items-center"
       key={file.path}
       href={href.toString()}
-      target={tabTarget(file.initializationId || file.path)}
+      // target={tabTarget(file.initializationId || file.path)}
+      target="_self"
     >
       <div className="flex flex-col justify-between flex-1">
         <span className="flex items-center gap-2">
@@ -500,7 +502,8 @@ const CreateNewNotebook: React.FC = () => {
       transition-all duration-300 cursor-pointer
       "
       href={url}
-      target="_blank"
+      // target="_blank"
+      target="_self"
       rel="noreferrer"
     >
       <h2 className="text-lg font-semibold">Create a new notebook</h2>
