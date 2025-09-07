@@ -111,16 +111,16 @@ const HomePage: React.FC = () => {
         }}
       >
         <div className="absolute top-3 right-5 flex gap-3 z-50">
-          <OpenTutorialDropDown />
-          <ConfigButton showAppConfig={false} />
-          <ShutdownButton
+          {/* <OpenTutorialDropDown /> */}
+          {/* <ConfigButton showAppConfig={false} /> */}
+          {/* <ShutdownButton
             description={`This will shutdown the notebook server and terminate all running notebooks (${running.size}). You'll lose all data that's in memory.`}
-          />
+          /> */}
         </div>
         <div className="flex flex-col gap-6 max-w-6xl container pt-5 pb-20 z-10">
-          <img src="logo.png" alt="marimo logo" className="w-48 mb-2" />
+          <img src="logo.png" alt="puku-note logo" className="w-1/2 mb-2" />
           <CreateNewNotebook />
-          <ResourceLinks />
+          {/* <ResourceLinks /> */}
           <NotebookList
             header={<Header Icon={PlayCircleIcon}>Running notebooks</Header>}
             files={[...running.values()]}
