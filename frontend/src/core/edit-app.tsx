@@ -98,7 +98,7 @@ export const EditApp: React.FC<AppProps> = ({
     document.title =
       appConfig.app_title ||
       Paths.basename(filename ?? "") ||
-      "Untitled Notebook";
+      "Puku Note";
   }, [appConfig.app_title, filename]);
 
   // Delete column breakpoints if app width changes from "columns"

@@ -42,7 +42,7 @@ export function useUpdateFilename() {
         setFilename(name);
         // Set document title: app_title takes precedence, then filename, then default
         document.title =
-          appConfig.app_title || Paths.basename(name) || "Untitled Notebook";
+          appConfig.app_title || Paths.basename(name) || "Puku Note";
         return name;
       })
       .catch((error) => {
