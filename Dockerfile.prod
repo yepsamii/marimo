@@ -1,0 +1,74 @@
+# Production optimized Dockerfile for Puku Note
+FROM node:20-alpine AS frontend-builder
+
+# Install pnpm
+RUN npm install -g pnpm@9
+
+WORKDIR /app
+
+# Copy package files for better layer caching  
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml turbo.json tsconfig.json ./
+COPY frontend/package.json ./frontend/
+COPY packages/llm-info/package.json ./packages/llm-info/
+COPY packages/lsp/package.json ./packages/lsp/
+COPY packages/openapi/package.json ./packages/openapi/
+COPY packages/ts-config/package.json ./packages/ts-config/
+COPY patches/ ./patches/
+
+# Install dependencies
+RUN pnpm install --no-frozen-lockfile --production=false
+
+# Install tsx for codegen using npm (pnpm global requires setup)
+RUN npm install -g tsx
+
+# Copy source and build
+COPY frontend/ ./frontend/
+COPY packages/ ./packages/
+
+# Copy marimo Python schemas needed for codegen
+COPY marimo/_schemas/ ./marimo/_schemas/
+
+# Build frontend using the project's build process
+ENV NODE_ENV=production
+RUN pnpm turbo build --filter @puku-team/frontend
+
+# Python runtime stage
+FROM python:3.11-alpine AS runtime
+
+# Install system dependencies
+RUN apk add --no-cache \
+    git \
+    gcc \
+    musl-dev \
+    linux-headers \
+    && pip install --no-cache-dir uv
+
+WORKDIR /app
+
+# Copy Python requirements and application code
+COPY pyproject.toml README.md LICENSE ./
+COPY marimo/ ./marimo/
+COPY scripts/ ./scripts/
+
+# Install dependencies
+RUN uv pip install --system --no-cache-dir -e .
+
+# Create directories and copy built assets
+RUN mkdir -p marimo/_static/ marimo/_lsp/
+COPY --from=frontend-builder /app/frontend/dist/ ./marimo/_static/
+COPY --from=frontend-builder /app/packages/lsp/dist/ ./marimo/_lsp/ 2>/dev/null || true
+
+# Create non-root user
+RUN adduser -D -s /bin/sh puku
+RUN mkdir -p /app/notebooks && chown -R puku:puku /app
+USER puku
+
+# Expose port
+EXPOSE 2718
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+    CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:2718')" || exit 1
+
+# Start marimo
+CMD ["python", "-m", "marimo", "edit", "--host", "0.0.0.0", "--port", "2718", "--no-token", "/app/notebooks"]

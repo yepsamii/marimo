@@ -3,10 +3,10 @@
 # If NODE_ENV is development, then we build the frontend in development mode.
 # Otherwise, we build the frontend in production mode.
 if [ "$NODE_ENV" = "development" ]; then
-  cmd="pnpm turbo build --filter @marimo-team/frontend -- --mode development"
+  cmd="pnpm turbo build --filter @puku-team/frontend -- --mode development"
 else
   export NODE_ENV=production
-  cmd="pnpm turbo build --filter @marimo-team/frontend"
+  cmd="pnpm turbo build --filter @puku-team/frontend"
 fi
 
 if $cmd; then
